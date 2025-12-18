@@ -1,0 +1,131 @@
+.choose {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #10241FFF;
+    padding: 8rem 6rem 8rem;
+
+    &_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;
+
+    > h1 {
+        font-weight: 600;
+        font-size: 48px;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        color: white;
+        b {
+            color: #02BA85FF;
+        }
+    }
+}
+    > .crypto_change {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+
+        .crypto_change_column {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+
+            > button {
+                border: 1px solid rgba(70, 89, 74, 1);
+                background: rgba(12, 32, 27, 1);
+                color: white;
+                width: 250px;
+                height: 58px;
+                margin: auto;
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: 25px;
+            }
+
+            > img {
+                width: 128px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 460px) {
+    .choose {
+        display: none;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1190px) {
+    .choose {
+        &_title {
+            height: 250px;
+
+            > h1 {
+                font-size: 40px;
+            }
+        }
+
+        > .crypto_change {
+            width: 100%;
+            margin-top: 40px;
+
+            > .crypto_change_column > button {
+                width: 220px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 700px) and (max-width: 991px) {
+    .choose {
+        &_title {
+            height: 250px;
+            > h1 {
+                font-size: 40px;
+            }
+        }
+
+        > .crypto_change {
+            width: 100%;
+            margin-top: 40px;
+
+            > .crypto_change_column > button {
+                width: 220px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 699px) {
+    .choose {
+
+        &_title {
+            height: 180px;
+            > h1 {
+                font-size: 25px;
+            }
+        }
+
+        > .crypto_change {
+            width: 100%;
+            margin-top: 50px;
+
+            > .crypto_change_column {
+                flex-direction: column;
+                row-gap: 30px;
+                
+                :first-child {
+                    order: 2;
+                }
+                
+             > button {
+                width: 220px;
+            }
+        }
+        }
+    }
+}

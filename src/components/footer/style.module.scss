@@ -1,0 +1,266 @@
+.footer {
+    padding: 5rem 8rem;
+    color: white;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+
+        &_text {
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+            > span {
+                font-weight: 600;
+                font-size: 18px;
+                
+            }
+            > p {
+                color: rgba(153, 161, 159, 1);
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+    }
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+
+        &_column {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            
+            > .footer_logo {
+                display: flex;
+                column-gap: 20px;
+            }
+            &_text {
+                width: 55%;
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+        &_links {
+            display: flex;
+            column-gap: 60px;
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                > h3 {
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                > a {
+                    margin-top: 8px;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .footer_contact {
+        display: flex;
+        column-gap: 20px;
+
+         > a {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        
+            &:hover, &:active {
+                border-radius: 50%;
+                border: 1px solid #00D094;
+                color: #00D094 !important;
+                fill: #00D094 !important;
+
+                svg {
+                    max-width: 100% !important;
+                    height: 24px !important;
+                }
+            }
+            &.active {
+                border-radius: 50%;
+                border: 1px solid #00D094;
+                color: #00D094 !important;
+                fill: #00D094 !important;
+
+                svg {
+                    fill: #00D094 !important;
+                }
+            }
+          
+         }
+    }
+    .border {
+        border-top: 1px solid rgba(153, 161, 159, 1);
+        margin: auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .footer {
+        padding: 0 50px 0 20px;
+
+        &_content {
+            &_text {
+                > span {
+                    font-weight: 600;
+                    font-size: 10px;
+                }
+                > p {
+                    color: rgba(153, 161, 159, 1);
+                    font-weight: 400;
+                    font-size: 10px;
+                }
+            }
+        }
+    &_row {
+        row-gap: 20px;
+        flex-direction: row;
+        
+        &_column {
+            &_logo {
+                column-gap: 6px;
+                > svg {
+                    width: 73px;
+                    height: 12px;
+                }
+                > img {
+                    width: 21px;
+                    height: 12px;
+                }
+            } 
+            &_text {
+                width: 100%;
+                > p {
+                    font-weight: 400;
+                    font-size: 10px;
+                    width: 80%;
+                }
+            }
+              
+        }
+        &_links {
+            column-gap: 40px;
+            justify-content: space-between;
+            &_item {
+                &:nth-child(odd) {
+                  display: none;
+                }
+              }
+            &_item {
+                row-gap: 6px;
+
+                > h3 {
+                    font-size: 10px;
+                    font-weight: 700;
+                }
+                > a {
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+        }
+       
+    }
+    &_contact {
+        justify-content: center;
+        margin-top: 25px;
+
+        > a {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    }
+    .border {
+        > p {
+            color: rgba(255, 255, 255, 1);
+            font-weight: 400;
+            font-size: 10px;
+        }
+    }
+}
+.footer_login {
+    &_content {
+       display: none;
+   }
+}
+}
+@media only screen and (min-width: 461px) and (max-width: 899px) {
+    .footer {
+        padding: 4rem 3rem;
+    &_row {
+        row-gap: 20px;
+        flex-wrap: wrap;
+        &_column {
+            &_text {
+                width: 100%;
+            }
+            > .footer_logo {
+                > img:first-child {
+                    width: 210px;
+                    height: 50px;
+                }
+                > img:last-child {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+        &_links {
+            justify-content: start;
+            width: 100%;
+        }
+        
+    }
+    &_contact {
+        margin-top: 20px !important;
+    }
+    }
+}
+@media only screen and (min-width: 900px) and (max-width: 1065px) {
+    .footer {
+        padding: 4rem 3rem;
+
+        &_row {
+        column-gap: 20px;
+
+        &_column {
+            &_text {
+                width: 80%;
+            }
+            > .footer_logo {
+                > img:first-child {
+                    width: 200px;
+                    height: 50px;
+                }
+                > img:last-child {
+                    width: 120px;
+                    height: 50px;
+                }
+            }
+        }
+        &_links {
+            column-gap: 40px;
+        }
+    }
+    }
+}

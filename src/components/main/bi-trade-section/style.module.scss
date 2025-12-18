@@ -1,0 +1,88 @@
+.trade {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+	color: white;
+
+
+	& h2 {
+		margin: 0 auto 3rem auto;
+		font-size: 3rem;
+		> b {
+			color: rgba(0, 208, 148, 1);
+		}
+	}
+
+	&_list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+			
+	&_item {
+		width: 100%;
+		aspect-ratio: 4 / 2;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		column-gap: 40px;
+		background-color: #21342FFF;
+		border: 1px solid transparent;
+		transition: 0.2s;
+
+		&:hover {
+			border: 1px solid rgba(0, 208, 148, 1);
+		}
+
+		& img {
+			width: 85px;
+			aspect-ratio: 1/1;
+			padding-left: 40px;
+
+			:nth-child(3n-2) {
+				width: 50px;
+				height: 85px;
+				padding-left: 40px;
+
+			}
+		}
+
+		&_text {
+				display: flex;
+				flex-direction: column;
+				row-gap: 8px;
+				font-size: 24px;
+				> p {
+					font-size: 16px;
+					margin: 0;
+				}
+		}
+	}
+	}
+	@media only screen and (max-width: 678px) {
+		.trade_list {
+			grid-template-columns: auto;
+			&_item {
+				width: 90%;
+				height: 200px;
+				margin: 0 auto;
+			}
+		}
+	}
+	@media only screen and (min-width: 679px) and (max-width: 1100px) {
+		.trade_list {
+			grid-template-columns: auto;
+
+			&_item {
+				width: 80%;
+				height: 200px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 460px) {
+	.trade {
+		display: none;
+	}
+}

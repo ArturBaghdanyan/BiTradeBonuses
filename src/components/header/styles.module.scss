@@ -1,0 +1,255 @@
+@mixin header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem 11rem;
+
+	&_logo { 
+	width: 275px;
+	height: 48px;
+
+		img {
+			max-width: 100%;
+			height: 48px;
+		}
+	}
+
+	 &_nav {
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
+
+		nav {
+			display: flex;
+			align-items: center;
+			column-gap: 38px;
+			
+			> a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: white;
+				height: 24px;
+				font-size: 1.3vw;
+				font-weight: 400;
+			}
+			
+			> select {
+				display: flex;
+				align-items: center;
+				background: none;
+				border: none;
+				color: white;
+				font-size: 1.3vw;
+				font-weight: 400;
+				height: 24px;
+				> option {
+					background: gray;
+					width: 50%;
+				}
+			}
+		}
+		> .flag {
+			display: none;
+			width: 24px;
+			height: 24px;
+			> img {
+				max-width: 100%;
+				height: 24px;
+			}
+		}
+.header_button {
+		width: 124px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 208, 148, 1);
+		border-radius: 8px;
+		font-size: 36px;
+		text-decoration: none;
+		> button {
+				background: none;
+				border: none;
+				padding: 12px 24px;
+				font-size: 16px;
+				font-weight: 600;			
+		}
+	}
+}
+}
+
+.header {
+	@include header();
+	.header_nav {
+		nav a {
+			color: white;
+		}
+	}
+}
+.header_about {
+	@include header();
+	background-color: white !important;
+	.header_nav {
+		nav a, select {
+			color: rgba(0, 0, 0, 1) !important;
+		}
+	}
+}
+@media screen and (max-width: 460px) {
+	.header_about { 
+		padding: 25px !important;
+	}
+}
+@media screen and (min-width: 461px) and (max-width: 992px) {
+	.header_about { 
+		padding: 3rem !important;
+	}
+}
+@media only screen and (max-width: 460px) {
+	.header {
+		padding: 25px !important;
+
+		&_logo {
+			width: 140px;
+			height: 25px;
+			> img {
+				max-width: 100%;
+				height: 25px;
+			}
+		}
+
+		&_nav {
+			column-gap: 10px;
+			> .flag {
+				display: flex;
+				width: 25px;
+				height: 17px;
+				> img {
+					max-width: 100%;
+					height: 17px;
+				}
+			}
+		> .header_button {
+			width: 70px !important;
+			height: 28px;
+
+			> button {
+				font-size: 12px;
+				padding: 0 5px !important;
+				color: rgba(12, 38, 58, 1);
+			}
+		}
+		> nav {
+			display: none;
+		}
+	}
+}
+}
+
+@media only screen and (min-width: 461px) and (max-width: 992px) {
+	.header {
+		padding: 3rem !important;
+
+		&_logo {
+			width: 210px;
+			height: 50px;
+		}
+		
+		&_nav {
+			column-gap: 20px;
+			
+			> .flag {
+				display: flex;
+				width: 40px;
+				height: 35px;
+				> img {
+					max-width: 100%;
+					height: 35px;
+				}
+			}
+			> .header_button {
+				width: 90px;
+				height: 40px;
+				> button {
+					font-size: 15px;
+					padding: 0;
+				}
+			}
+			> nav {
+			display: none;
+		}
+		}
+		
+}
+@media only screen and (min-width: 1331px) and (max-width: 1405px) {
+	.header {
+		padding: 3rem 8rem !important;
+	&_nav {
+		> nav {
+			column-gap: 25px !important;
+			> a, select {
+				font-size: 18px !important;
+			}
+		}
+	}
+}
+}
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+	.header {
+
+		&_logo {
+			width: 200px;
+			height: 50px;
+		}
+
+		&_nav {
+			column-gap: 20px !important;
+			> nav {
+				column-gap: 20px !important;
+			> a, select {
+				font-size: 15px !important;
+			}
+		}
+		
+		> .header_button {
+			width: 90px !important;
+			height: 40px;
+			> button {
+				font-size: 15px;
+				padding: 0 !important;
+			}
+		}
+	}
+	}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1380px) {
+	.header {
+		padding: 3rem 8rem !important;
+		
+		&_logo {
+			width: 250px;
+			height: 50px;
+		}
+
+		&_nav {
+			column-gap: 40px !important;
+			> nav {
+				column-gap: 25px !important;
+			> a, select {
+				font-size: 18px !important;
+			}
+		}
+	}
+}
+}
+.channel {
+	width: 350px;
+	height: 150px;
+	> img {
+		max-width: 100%;
+		height: 150px;
+	}
+}

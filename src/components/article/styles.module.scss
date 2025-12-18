@@ -1,0 +1,163 @@
+.trading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 3rem;
+    
+    
+    &_texture {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        width: 60%;
+
+        &_text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+
+            > span {
+                font-size: 60px;
+                font-weight: 600;
+                color: white;
+                > b {
+                    color: rgba(0, 208, 148, 1);
+                }
+            }
+            > p {
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 1);
+                opacity: 60%;
+                width: 80%;
+            }
+        }
+        &_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 60px;
+            background-color: rgba(0, 208, 148, 1);
+            border-radius: 8px;
+
+
+            > button {
+                background: none;
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &_channel {
+        aspect-ratio: 16 / 9;
+
+        & > img {
+            width: 100%;
+            height: auto;
+            user-select: none;
+        }
+    }
+
+
+    @media only screen and (min-width: 1191px) and (max-width: 1330px) {
+        &_texture {
+            &_text {
+                width: 65%;
+
+                > span {
+                    font-size: 35px;
+                }
+                > p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1190px) {
+        &_texture {
+            &_text {
+                width: 80%;
+                > span {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    .trading {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 30px;
+
+        &_texture {
+            width: 100% !important;
+            &_text {
+                width: 100%;
+                margin: auto;
+                > span {
+                    font-size: 25px;
+                }
+                > p {
+                    width: 90%;
+                    font-size: 10px;
+                    margin: 0 auto;
+                }
+            }
+            &_button {
+                margin: auto;
+                width: 140px;
+                height: 46px;
+
+                > button {
+                    font-size: 15px;
+                    color: rgba(12, 38, 58, 1);
+                }
+                > img {
+                    display: none;
+                }
+            }
+        }
+
+        &_channel {
+            display: none !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 461px) and (max-width: 992px) {
+    .trading {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 30px;
+
+        &_texture {
+            width: 80% !important;
+            &_text {
+                width: 100%;
+                margin: auto;
+                > span {
+                    font-size: 30px;
+                }
+                > p {
+                    width: 100%;
+                }
+            }
+            &_button {
+                margin: auto;
+            }
+        }
+        &_channel {
+            display: none !important;
+        }
+    }
+}

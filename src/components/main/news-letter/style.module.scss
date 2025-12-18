@@ -1,0 +1,238 @@
+.newsSection {
+	position: relative;
+	top: -130px;
+	width: 70%;
+	background-color: rgba(0, 208, 148, 1);
+	border-radius: 12px;
+	margin: 0 auto;
+
+.news {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+
+	&_row {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+		&_icon {
+			width: 37%; 
+			height: 281px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		> img {
+			max-width: 100%;
+			height: 300px;		
+			object-fit: contain;
+			}
+		}
+		
+		 &_text {
+			width: 60%;
+			user-select: none;
+			> h2 {
+				font-weight: 600;
+				font-size: 48px;
+				color: #206161FF;
+				margin: 0 0 2rem;
+
+				> b {
+					color: #205FD8FF;
+				}
+			}
+		> p {
+			font-weight: 400;
+			font-size: 22px;
+			margin-bottom: 3rem;
+			color: rgba(12, 38, 58, 1);
+			}
+		}
+	}
+	
+	&_form {
+		display: flex;
+		column-gap: 8px;
+		justify-content: end;
+		> input {
+			width: 37%;
+			height: 60px;
+			border-radius: 12px;
+			border: none;
+			padding: 0 20px;
+		}
+		> button {
+			width: 20%;
+			height: 60px;
+			background: #0A4FD5FF;
+			border: none;
+			border-radius: 8px;
+
+		> a {
+			color: white;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 16px;
+		}
+}
+	}
+	
+}
+}
+@media only screen and (max-width: 460px) {
+	.newsSection {
+		width: 80% !important;
+
+		.news {
+			padding: 22px;
+			
+			&_row {
+				justify-content: space-around;
+
+				&_icon {
+					width: 50px;
+					height: auto;
+					> img {
+						max-width: 100%;
+						height: auto;
+					}
+				}
+			&_text {
+				display: flex;
+				flex-direction: column;
+				row-gap: 15px;
+				width: 67%;
+				> h2 {
+					font-size: 20px;
+					margin: 0 !important;
+				}
+				> p {
+					font-size: 10px;
+					font-weight: 400;
+					margin: 0;
+				}
+			}	
+		}
+		&_form {
+				margin-top: 20px;
+				padding-left: 25px;
+			> input {
+				width: 60% !important;
+				height: 22px !important;
+				border-radius: 4px !important;
+				::placeholder {
+					font-size: 10px !important;
+				}
+			}
+			> button {
+				width: 30% !important;
+				height: 22px !important;
+				border-radius: 4px !important;
+
+				> a {
+					font-size: 12px;
+				}
+			}
+		}
+		}
+	}
+}
+
+@media only screen and (min-width: 461px) and (max-width: 899px) {
+	.newsSection {
+		top: -70px;
+		width: 80% !important;
+		.news {
+			column-gap: 40px;
+			padding: 30px;
+
+			&_row {
+				column-gap: 35px;
+
+				&_icon {
+					width: 40%; 
+					height: 281px;
+				}
+				&_text {
+					display: flex;
+					flex-direction: column;
+					row-gap: 20px;
+
+				> h2 {
+					font-size: 32px;
+					margin: 0;
+				}
+				> p {
+					font-size: 18px;
+					margin: 0;
+				}
+				}
+			}
+			&_form {
+				flex-direction: row;
+				row-gap: 10px;
+
+				> input {
+					width: 80%;
+					height: 40px;
+					::placeholder {
+						font-size: 18px;
+					}
+				}
+				> button {
+					width: 60%;
+					height: 40px;
+					> a {
+						text-align: center;
+						font-size: 18px;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		}
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1380px) {
+	.newsSection {
+		top: -90px;
+		padding: 50px;
+
+		.news {
+			column-gap: 40px;
+			padding: 0;
+			&_icon {
+					width: 50%; 
+					height: 281px;
+			}
+				.news_text {
+
+				> h2 {
+					font-size: 30px;
+				}
+				> p {
+					font-size: 14px;
+				}
+			}
+			&_form {
+
+				> input {
+					width: 35%;
+					height: 40px;
+				}
+				> button {
+					width: 20%;
+					height: 40px;
+					> a {
+						text-align: center;
+						font-size: 14px;
+						font-weight: 500;
+					}
+				}
+			}
+			
+
+		}
+	}
+}
