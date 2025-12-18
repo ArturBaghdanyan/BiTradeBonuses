@@ -1,4 +1,3 @@
-// FacebookIcon.tsx
 import React from "react";
 
 type IconProps = {
