@@ -1,20 +1,15 @@
 import Header from "../../components/header/index";
 import Footer from "../../components/footer";
-import HomeHeroImage from "../../assets/HomeHero.svg";
 import MainContainer from "../../components/main";
 import TradingText from "../../components/article";
 
+import style from "./style.module.css";
+
 const Home = () => {
+
   return (
     <>
-      <div
-        className="columns"
-        style={{
-          backgroundImage: `url(${HomeHeroImage})`,
-          minHeight: "100vh",
-          paddingBottom: "3rem",
-        }}
-      >
+     <div className={`columns ${style.hero}`}>
         <Header isHomePage={true} />
         <TradingText />
       </div>

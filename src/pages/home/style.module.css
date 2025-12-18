@@ -1,0 +1,8 @@
+.hero {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  background-image: url("../../assets/HomeHero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
