@@ -4,10 +4,12 @@ import MainContainer from "./components/main";
 
 import "./App.css";
 import AboutPage from "./pages/about";
+import ContactPage from "./pages/contact";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/about", element: <AboutPage /> },
+  {path: '/contact', element: <ContactPage />},
   { path: "/main", element: <MainContainer /> },
 ]);
 
